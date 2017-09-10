@@ -84,7 +84,7 @@ test('if expireAfter will call an onExpire callback', async (t) => {
   t.true(onExpire.calledOnce);
 });
 
-test('if onExpire callback can cancel expireAfter', async (t) => {
+test('if onExpire callback can reset expireAfter age', async (t) => {
   const key = {key: 'foo'};
   const maxAge = 100;
   let stillGood = 1;
